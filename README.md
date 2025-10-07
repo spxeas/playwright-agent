@@ -1,38 +1,38 @@
-# Playwright Agent Demo
+# Playwright Agent 範例
 
-This project shows how to drive Google Search with Playwright while mimicking human behaviour (typing speed, scrolling, cursor movement, retries, persistent browser profile, etc.). Running the script saves the top results to `results.json`, which you can inspect or feed into other tools.
+這個專案示範如何使用 Playwright 操控 Google 搜尋，同時透過「人性化」行為（逐字輸入、滑鼠移動、滾動頁面、重試機制、持久化瀏覽器資料夾等）降低自動化的可偵測性。腳本執行後會將搜尋結果寫入 `results.json`，方便後續分析或整合其他工具。
 
-## Prerequisites
-- Node.js 18+ (Playwright requires fairly recent Node versions)
-- Git (optional but recommended)
-- A Chrome-compatible browser; Playwright will download its own build on first install
+## 環境需求
+- Node.js 18 以上（Playwright 需要較新的 Node 版本）
+- Git（非必須，但方便同步程式碼）
+- 可執行 Chromium 的環境；首次安裝 Playwright 會自動下載對應瀏覽器
 
-## Installation
+## 安裝步驟
 ```bash
 git clone https://github.com/spxeas/playwright-agent.git
 cd playwright-agent
 npm install
 ```
 
-If you already have the files locally, simply run `npm install` inside the project directory.
+如果你已經有本地專案資料夾，只要在專案根目錄執行 `npm install` 安裝相依即可。
 
-## Usage
-### Basic run
+## 使用方式
+### 基本執行
 ```bash
 node agent.js "Playwright 自動化"
 ```
-This launches Chromium in headed mode, types the query using human-like delays, scrolls the results page, then writes the captured titles/links to `results.json`.
+Chromium 會在有頭模式啟動，使用人性化延遲輸入關鍵字、模擬滑鼠與滾動，最後把抓到的標題與連結寫進 `results.json`。
 
-### Options
-Adjust these options inside `agent.js` when calling `searchGoogle`:
-- `headless`: set to `true` to run without a visible browser window.
-- `usePersistent`: `true` loads/saves a persistent profile under `./user-data`, keeping cookies/history for a more organic footprint.
-- `profilePath`: change if you want the persistent profile elsewhere.
-- `maxRetries`: number of retry attempts when navigation fails.
-- `timeout`: navigation timeout in milliseconds.
+### 可調參數
+在 `agent.js` 呼叫 `searchGoogle` 時可以調整：
+- `headless`：改成 `true` 可隱藏瀏覽器視窗。
+- `usePersistent`：`true` 會使用 `./user-data` 存放持久化的瀏覽器資料（Cookie、歷史紀錄）。
+- `profilePath`：若想把持久化資料放在別處可修改這裡。
+- `maxRetries`：導航失敗時的最大重試次數。
+- `timeout`：各項導航操作的逾時毫秒數。
 
-## Output
-Each run overwrites `results.json` with a structure like:
+## 輸出內容
+每次執行會覆寫 `results.json`，格式如下：
 ```json
 {
   "query": "Playwright 自動化",
@@ -43,7 +43,7 @@ Each run overwrites `results.json` with a structure like:
 }
 ```
 
-## Notes
-- `user-data/` is generated when `usePersistent` is enabled; keep it between runs if you want to reuse cookies.
-- The script includes basic consent-handling for Google's cookie banner, but regional variations might require manual tweaks.
-- For production use, consider adding error handling, logging, and respecting Google's terms of service.
+## 注意事項
+- 啟用 `usePersistent` 後會生成 `user-data/` 目錄；若想保留 Cookie 就不要刪掉它。
+- 腳本內有簡單處理 Google Cookie 彈窗，但不同地區顯示內容可能不同，必要時自行調整。
+- 若要用於正式環境，建議加上更完整的錯誤處理、紀錄與風險控管，並注意 Google 的服務條款。
