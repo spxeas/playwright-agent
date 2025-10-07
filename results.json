@@ -1,0 +1,42 @@
+{
+  "query": "Playwright 自動化",
+  "results": [
+    {
+      "title": "【Playwright】打造更聰明瀏覽器自動化測試 - 忍者工坊",
+      "href": "https://nijialin.com/2025/04/22/playwright-mcp-testing/"
+    },
+    {
+      "title": "新手入門：用Playwright 進行網頁爬蟲的完整指南",
+      "href": "https://thunderbit.com/zh-Hant/blog/playwright-python-tutorial"
+    },
+    {
+      "title": "Day23. 用Playwright來進行自動化測試- 1 - iT 邦幫忙",
+      "href": "https://ithelp.ithome.com.tw/articles/10350634"
+    },
+    {
+      "title": "Playwright自動化UI測試利器",
+      "href": "https://medium.com/ricos-note/playwright%E8%87%AA%E5%8B%95%E5%8C%96ui%E6%B8%AC%E8%A9%A6%E5%88%A9%E5%99%A8-8db5ff9a0652"
+    },
+    {
+      "title": "Playwright 入門",
+      "href": "https://www.tpisoftware.com/tpu/articleDetails/3007"
+    },
+    {
+      "title": "Playwright e2e測試框架",
+      "href": "https://medium.com/@imaginechiu/playwright-%E6%B8%AC%E8%A9%A6%E6%A1%86%E6%9E%B6-2628ce0cc2a0"
+    },
+    {
+      "title": "60 倍效率使用Playwright 幫你測表單 - 阿中小站",
+      "href": "https://eagle.aii.tw/%E5%A5%BD%E7%94%A8%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B/60-%E5%80%8D%E6%95%88%E7%8E%87%E4%BD%BF%E7%94%A8-playwright-%E5%B9%AB%E4%BD%A0%E6%B8%AC%E8%A1%A8%E5%96%AE/"
+    },
+    {
+      "title": "如何在Docker 執行Playwright 自動化測試腳本",
+      "href": "https://blog.miniasp.com/post/2024/10/14/How-to-run-Playwright-automation-test-scripts-in-Docker"
+    },
+    {
+      "title": "實戰E2E 測試：使用Playwright 測試框架 - 多奇教育訓練",
+      "href": "https://learn.duotify.com/courses/e2e-playwright"
+    }
+  ],
+  "ts": "2025-10-07T15:57:52.648Z"
+}
